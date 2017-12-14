@@ -65,12 +65,20 @@ def splitOdd10(array, target=0, start=0):
         return True
     if start >= len(array):
         return False
-    return splitOdd10(array, target=target + array[start], start=start + 1) \
+    return splitOdd10(array, target=target+array[start], start=start+1) \
            or splitOdd10(array, target=target, start=start + 1)
 
 
-def split53():
-
+def split53(array, target=0, start=0):
+    if target == sum(array)-target:
+        return True
+    if start >= len(array):
+        return False
+    if array[start] % 5 == 0:
+        return split53(array, target=target+array[start], start=start+1)
+    if array[start] % 3 == 0:
+        return split53(array, target=target, start=start+1)
+    return split53(array, target=target+array[start], start=start+1) or split53(array, target=target, start=start+1)
 
 
 print("groupSum(0,[2,4,8],10)", groupSum(0, [2, 4, 8], 10))
@@ -80,3 +88,4 @@ print("groupSum5(0, [2,5,1,10,1,4], 18)", groupSum5(0, [2, 5, 1, 10, 1, 4], 18))
 print("groupSumClump(0, [2,4,4,8], 14)", groupSumClump(0, [2, 4, 4, 8], 14))
 print("splitArray([5,2,3])", splitArray([5, 2, 3]))
 print("splitOdd10([5,5,6,1])", splitOdd10([5, 5, 6, 1]))
+print("split53([2,4,2])", split53([3, 5, 5, 3]))
