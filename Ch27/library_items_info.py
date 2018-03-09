@@ -1,5 +1,6 @@
 # Andy Wang Task 27.02
 import datetime
+from human_info import *
 
 
 class LibraryItem:
@@ -9,6 +10,7 @@ class LibraryItem:
         self.itemID = itemID
         self.onLoan = False
         self.dueDate = None
+        self.borrowerID = None
 
     def getTitle(self):
         return self.title
@@ -25,16 +27,20 @@ class LibraryItem:
     def getDueDate(self):
         return self.dueDate
 
-    def borrowing(self):
+    def getBorrowerID(self):
+        return self.borrowerID
+
+    def borrowItem(self):
         self.onLoan = True
         self.dueDate = self.dueDate + datetime.timedelta(weeks = 3)
+        self.borrowerID = self.getBorrowerID()
 
-    def returning(self):
+    def returnItem(self):
         self.onLoan = False
 
     def printDetails(self):
         print(self.title, "; ", self.author, "; ", end="")
-        print(self.itemID, "; ", self.onLoan, "; ", self.dueDate)
+        print(self.itemID, "; ", self.onLoan, "; ", self.dueDate, "; ", end="")
 
 
 class Book(LibraryItem):
@@ -49,6 +55,11 @@ class Book(LibraryItem):
     def setIsRequested(self):
         self.isRequested = True
 
+    def printDetails(self):
+        print("Book Details: ", end="")
+        LibraryItem.printDetails(self)
+        print(self.getIsRequested())
+
 
 class CD(LibraryItem):
     def __init__(self, title, author, itemID):
@@ -61,8 +72,10 @@ class CD(LibraryItem):
     def setGenre(self, genre):
         self.genre = genre
 
+    def printDetails(self):
+        LibraryItem.printDetails(self)
+        print(self.genre)
 
-thisCD = CD()
-thisCD.__init__("And Justice FOr All", "Metallica", 1)
-
-print(thisCD)
+thisBook = Book("And Justice For All", "Metallica", 1)
+#thisCD.setGenre("Pop")
+thisBook.printDetails()
