@@ -1,11 +1,9 @@
-from library_items_info import *
-
 
 class Borrower:
-    def __init__(self, name, email):
+    def __init__(self, name, email, borrowerID):
         self.borrowerName = name
         self.emailAddress = email
-        self.borrowerID = LibraryItem.getBorrowerID(self)
+        self.borrowerID = borrowerID
         self.itemsOnLoan = 0
 
     def getBorrowerName(self):
@@ -20,8 +18,8 @@ class Borrower:
     def getItemsOnLoan(self):
         return self.itemsOnLoan
 
-    def updateItemsOnLoan(self):
-        self.itemsOnLoan += 1
+    def updateItemsOnLoan(self, n):
+        self.itemsOnLoan += n
 
     def printDetails(self):
         print(self.borrowerName, "; ", self.emailAddress, "; ", end="")

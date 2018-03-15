@@ -1,6 +1,6 @@
 # Andy Wang Task 27.02
 import datetime
-from human_info import *
+from human_info import Borrower
 
 
 class LibraryItem:
@@ -34,9 +34,13 @@ class LibraryItem:
         self.onLoan = True
         self.dueDate = self.dueDate + datetime.timedelta(weeks = 3)
         self.borrowerID = self.getBorrowerID()
+        Borrower.updateItemsOnLoan(1)
 
     def returnItem(self):
         self.onLoan = False
+        self.dueDate = None
+        self.borrowerID = None
+        Borrower.updateItemsOnLoan(-1)
 
     def printDetails(self):
         print(self.title, "; ", self.author, "; ", end="")
@@ -78,4 +82,4 @@ class CD(LibraryItem):
 
 thisBook = Book("And Justice For All", "Metallica", 1)
 #thisCD.setGenre("Pop")
-thisBook.printDetails()
+thisBook.returnItem()
