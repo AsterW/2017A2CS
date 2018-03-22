@@ -8,27 +8,27 @@ The * sign means an iteration takes place.
 The o sign means a selection takes place between two conditions.
 
 ### task 1.3
-`NOT EOF
+``NOT EOF
 Salary > 50
 Salary >= 90
 "Project Manager."
 "Lead Developer."
 "Manager."
-`
+``
 
 ### task 1.4
 Under the condition `Salary > 50` is `FALSE`, add a condition `Salary > 70`. Under this new condition, add an operation called "Assign Consultant".
 
 ### task 1.5
 Add under line 9:
-`IF Salary > 70
+``IF Salary > 70
 	THEN Role <- "Consultant."
 	ELSE Role <- "Lead Developer."
-ENDIF`
+ENDIF``
 Delete line 9.
 
 ### task 1.6
-`def role(salary):
+``def role(salary):
 	s = salary
 	role = ""
 	if s > 50:
@@ -40,4 +40,4 @@ Delete line 9.
 			role = "Lead Developer."
 	else:
 		role =  "Manager."
-	return role`
+	return role``
