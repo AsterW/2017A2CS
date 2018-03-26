@@ -18,7 +18,7 @@ Salary >= 90
 ```
 
 ### task 1.4
-Under the condition `Salary > 50` is `FALSE`, add a condition `Salary > 70`. Under this new condition, add an operation called "Assign Consultant".
+Under the condition `Salary > 50` is `FALSE`, add a condition `Salary > 70` (with a selection sign on the corner). If TRUE, add an operation called "Assign Consultant"; if FALSE, go to selection 
 
 ### task 1.5
 Add under line 9:
@@ -46,3 +46,192 @@ def role(salary):
 		role =  "Manager."
 	return role
 ```
+---------------------------------------
+---------------------------------------
+---------------------------------------
+## Task 2
+### task 2.1
+class Toy:
+Attributes:
+name
+id
+price
+minimum_age
+
+Functions:
+setName()
+setID()
+setPrice()
+setMinimumAge()
+getName()
+getID()
+getPrice()
+getMinimumAge()
+---------------------------------
+class ComputerGame:
+Attributes:
+category
+console
+
+Functions:
+setCategory()
+setConsole()
+getCategory()
+getConsole()
+---------------------------------
+class Vehicle:
+Attributes:
+type
+height
+length
+weight
+
+Functions:
+setType()
+setHeight()
+setLength()
+setWeight()
+getType()
+getHeight()
+getLength()
+getWeight()
+
+### task 2.2
+Inheritance means that the parameters of a class is passed directly to its subclasses.
+In my class diagram, ComputerGame and Vehicle are subclasses of the Toy.
+
+### task 2.3
+```
+class toy:
+        def __init__(self, n, i, p, m):
+            self.name = n
+            self.id = i
+            self.price = p
+            self.minimumage = m
+        
+        def getName(self):
+            return self.name
+            
+        def setName(self, name):
+            self.name = name
+            
+        def getID(self):
+            return self.id
+        
+        def setID(self,id):
+            self.id = id
+        
+        def getPrice(self):
+            return self.price
+            
+        def setPrice(self, price):
+            self.price = price
+        
+        def getMinimumAge(self):
+            return self.minimumage
+       
+       def setMinimumAge(self, age):
+            self.minimumage = age
+
+```
+
+### task 2.4
+```
+class ComputerGame(Toy):
+	def __init__(self, n, i, p, m, ct, cs):
+		toy.__init__(self, n, i, p, m)
+		self.category = ct
+		self.console = cs
+
+	def getCategory(self):
+		return self.category
+
+	def setCategory(self, category):
+		self.category = category
+
+	def getConsole(self):
+		return self.console
+
+	def setConsole(self, console):
+		self.console = console
+
+
+class Vehicle(Toy):
+        def __init__(self, n, i, p, m, t, h, l, w):
+            toy.__init__(self, n, i, p, m)
+            self.type = t
+            self.height = h
+            self.weight = w
+            self.length = l
+
+       	def getType(self):
+       		return self.type
+
+       	def setType(self, type):
+       		self.type = type
+
+       	def getHeight(self):
+       		return self.height
+
+       	def setHeight(self, height):
+       		self.height = height
+
+       	def getWeight(self, weight):
+       		return self.weight
+
+       	def setWeight(self, weight):
+       		self.weight = weight
+
+       	def getLength(self):
+       		return self.length
+
+       	def setLength(self, length):
+       		self.length = length
+```
+
+### task 2.5
+```
+try:
+	if age > 0 and age < 18:
+		self.age = age
+	else:
+		age = input("Pleas enter a new age.")
+
+```
+
+### task 2.6
+vehicle = []
+computerGame = []
+vehicle.append("Red Sports Car", "RSC13", 15.00, 6, "car", 3.3, 12.1, 0.08)
+computerGame.append("Player Unknowns's Battle Ground", ID = "PUBG13", 16.00, 13, "FPS", "Multiplayer")
+
+### task 2.7
+Under class Toy:
+```
+def printDetails(self, id = input("Please enter the ID of the toy.")
+	print(self.name, self.id, self.price, self.minimumage)
+```
+
+### task 2.8
+```
+def discount(n):
+        n = n/100
+        for i in range(len(toy)):
+            toy[i].prince = toy[i].price * n
+```
+
+### task 2.9
+Bubble sort swaps the position of the values one by one; Insertion sort put the searched value into positions in the list until it finds the appropriate one.
+
+### task 2.10
+```
+def sort():
+        for i in range(1, len(Toys)):
+            itemToBeInserted = toy[i]
+            n = i-1
+            while itemtobeinserted.price < toy[n].price and n > 0:
+                toy[n+1] = toy[n]
+                n -= 1
+            toy[n+1] = itemToBeInserted
+```
+
