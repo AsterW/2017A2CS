@@ -67,7 +67,7 @@ getName()
 getID()
 getPrice()
 getMinimumAge()
----------------------------------
+
 class ComputerGame:
 Attributes:
 category
@@ -78,7 +78,7 @@ setCategory()
 setConsole()
 getCategory()
 getConsole()
----------------------------------
+
 class Vehicle:
 Attributes:
 type
@@ -234,7 +234,9 @@ def sort():
                 n -= 1
             toy[n+1] = itemToBeInserted
 ```
-
+---------------------------------------
+---------------------------------------
+---------------------------------------
 ## Task 3
 ### task 3.1
 character(habib).
