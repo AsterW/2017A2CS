@@ -239,20 +239,20 @@ def sort():
 ---------------------------------------
 ## Task 3
 ### task 3.1
-character(habib).
-character_type(habib, explorer).
-has_skill(habib, timetravel).
+character(habib).\s\s
+character_type(habib, explorer).\s\s
+has_skill(habib, timetravel).\s\s
 
-animal(fish).
-pet(habib, fish).
+animal(fish).\s\s
+pet(habib, fish).\s\s
 
 ### task 3.2
 pet(X, Y) if character(X) and animal(Y).
 
 ### task 3.3
-character(candice).
-character(andy).
-character_type(candice, flowermaker).
+character(candice).\s\s
+character(andy).\s\s
+character_type(candice, flowermaker).\s\s
 character_type(andy, farmer).
 skill(sweetflower).
 skill(supermagnet).
