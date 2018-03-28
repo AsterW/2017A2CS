@@ -239,7 +239,7 @@ def sort():
 ---------------------------------------
 ## Task 3
 ### task 3.1
-character(habib).\s\s
+character(habib).\
 character_type(habib, explorer).\s\s
 has_skill(habib, timetravel).\s\s
 
