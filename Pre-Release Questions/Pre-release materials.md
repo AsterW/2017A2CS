@@ -235,3 +235,42 @@ def sort():
             toy[n+1] = itemToBeInserted
 ```
 
+## Task 3
+### task 3.1
+character(habib).
+character_type(habib, explorer).
+has_skill(habib, timetravel).
+
+animal(fish).
+pet(habib, fish).
+
+### task 3.2
+pet(X, Y) if character(X) and animal(Y).
+
+### task 3.3
+character(candice).
+character(andy).
+character_type(candice, flowermaker).
+character_type(andy, farmer).
+skill(sweetflower).
+skill(supermagnet).
+animal(cat).
+animal(dog).
+pet(candice, cat).
+pet(andy, dog).
+has_skill(candice, sweetflower).
+has_skill(andy, supermagnet).
+
+### task 3.4
+true.
+X = princess.
+X = jim.
+X = invisibility.
+X = jim.
+
+### task 3.5
+pet(jim, X).
+has_skill(X, fly).
+skill(X).
+pet(X, Y) :-
+	character_type(X, princess).
