@@ -240,39 +240,39 @@ def sort():
 ## Task 3
 ### task 3.1
 character(habib).\
-character_type(habib, explorer).\s\s
-has_skill(habib, timetravel).\s\s
+character_type(habib, explorer).\
+has_skill(habib, timetravel).\
 
-animal(fish).\s\s
-pet(habib, fish).\s\s
+animal(fish).\
+pet(habib, fish).\
 
 ### task 3.2
 pet(X, Y) if character(X) and animal(Y).
 
 ### task 3.3
-character(candice).\s\s
-character(andy).\s\s
-character_type(candice, flowermaker).\s\s
-character_type(andy, farmer).
-skill(sweetflower).
-skill(supermagnet).
-animal(cat).
-animal(dog).
-pet(candice, cat).
-pet(andy, dog).
-has_skill(candice, sweetflower).
-has_skill(andy, supermagnet).
+character(candice).\
+character(andy).\
+character_type(candice, flowermaker).\
+character_type(andy, farmer).\
+skill(sweetflower).\
+skill(supermagnet).\
+animal(cat).\
+animal(dog).\
+pet(candice, cat).\
+pet(andy, dog).\
+has_skill(candice, sweetflower).\
+has_skill(andy, supermagnet).\
 
 ### task 3.4
-true.
-X = princess.
-X = jim.
-X = invisibility.
+true.\
+X = princess.\
+X = jim.\
+X = invisibility.\
 X = jim.
 
 ### task 3.5
-pet(jim, X).
-has_skill(X, fly).
-skill(X).
-pet(X, Y) :-
+pet(jim, X).\
+has_skill(X, fly).\
+skill(X).\
+pet(X, Y) :-\
 	character_type(X, princess).
