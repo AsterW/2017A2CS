@@ -4,7 +4,7 @@
 JSP structure diagrams show the basic structure of the program and functions within it. Basic operations like comparisons and if statement are also shown.
 
 ### task 1.2
-The * sign means an iteration takes place.
+The * sign means an iteration takes place.\
 The o sign means a selection takes place between two conditions.
 
 ### task 1.3
@@ -51,49 +51,49 @@ def role(salary):
 ---------------------------------------
 ## Task 2
 ### task 2.1
-class Toy:
-Attributes:
-name
-id
-price
+class Toy:\
+Attributes:\
+name\
+id\
+price\
 minimum_age
 
-Functions:
-setName()
-setID()
-setPrice()
-setMinimumAge()
-getName()
-getID()
-getPrice()
+Functions:\
+setName()\
+setID()\
+setPrice()\
+setMinimumAge()\
+getName()\
+getID()\
+getPrice()\
 getMinimumAge()
 
-class ComputerGame:
-Attributes:
-category
+class ComputerGame:\
+Attributes:\
+category\
 console
 
-Functions:
-setCategory()
-setConsole()
-getCategory()
+Functions:\
+setCategory()\
+setConsole()\
+getCategory()\
 getConsole()
 
-class Vehicle:
-Attributes:
-type
-height
-length
+class Vehicle:\
+Attributes:\
+type\
+height\
+length\
 weight
 
-Functions:
-setType()
-setHeight()
-setLength()
-setWeight()
-getType()
-getHeight()
-getLength()
+Functions:\
+setType()\
+setHeight()\
+setLength()\
+setWeight()\
+getType()\
+getHeight()\
+getLength()\
 getWeight()
 
 ### task 2.2
@@ -200,9 +200,9 @@ try:
 ```
 
 ### task 2.6
-vehicle = []
-computerGame = []
-vehicle.append("Red Sports Car", "RSC13", 15.00, 6, "car", 3.3, 12.1, 0.08)
+vehicle = []\
+computerGame = []\
+vehicle.append("Red Sports Car", "RSC13", 15.00, 6, "car", 3.3, 12.1, 0.08)\
 computerGame.append("Player Unknowns's Battle Ground", ID = "PUBG13", 16.00, 13, "FPS", "Multiplayer")
 
 ### task 2.7
@@ -241,10 +241,10 @@ def sort():
 ### task 3.1
 character(habib).\
 character_type(habib, explorer).\
-has_skill(habib, timetravel).\
+has_skill(habib, timetravel).
 
 animal(fish).\
-pet(habib, fish).\
+pet(habib, fish).
 
 ### task 3.2
 pet(X, Y) if character(X) and animal(Y).
@@ -261,7 +261,7 @@ animal(dog).\
 pet(candice, cat).\
 pet(andy, dog).\
 has_skill(candice, sweetflower).\
-has_skill(andy, supermagnet).\
+has_skill(andy, supermagnet).
 
 ### task 3.4
 true.\
